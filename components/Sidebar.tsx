@@ -79,7 +79,7 @@ export default function Sidebar({ activeTab }: SidebarProps) {
                   className="w-4 h-4 rounded border-gray-600 bg-transparent accent-[#43D9AD]"
                 />
                 <span className="text-gray-400 group-hover:text-white transition-colors">
-                  Flutter
+                  Flutter Dart
                 </span>
               </label>
             </div>

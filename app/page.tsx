@@ -1,6 +1,7 @@
 "use client"
 
 import HeroSection from "@/components/HeroSection"
+import ProjectsGrid from "@/components/ProjectsGrid"
 import Sidebar from "@/components/Sidebar"
 import TitleBar from "@/components/TitleBar"
 import { act, useState } from "react"
@@ -20,11 +21,9 @@ export default function Home() {
           <Sidebar activeTab={activeTab} />
 
           {/* Main Editor */}
-          <section className="flex-1 overflow-y-auto p-8 lg:p-16 bg-[#0d1326]/30 relative">
+          <section className="flex-1 overflow-y-auto p-8 lg:p-16 bg-[#0d1326]/30 relative editor-scroll">
             {activeTab === "index.tsx" && <HeroSection />}
-            {activeTab === "projects.tsx" && (
-              <div className="text-white">Projects Grid Coming Soon</div>
-            )}
+            {activeTab === "projects.tsx" && <ProjectsGrid />}
           </section>
         </div>
       </main>
