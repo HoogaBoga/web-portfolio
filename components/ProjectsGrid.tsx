@@ -1,18 +1,59 @@
 import Image from "next/image"
 
-export default function ProjectsGrid() {
+export default function ProjectsGrid({ filters }: { filters: string[] }) {
   const projects = [
     {
       id: 1,
       title: "iDiscount Mobile App",
       lang: "Flutter Dart",
       icon: "💰",
-      desc: "Engineered and successfully published a cross-platform mobile application for student discounts to the Google Play Store within a specialized 4-person team. ",
+      desc: "Engineered and successfully published a cross-platform mobile application for student discounts to the Google Play Store within a specialized 4-person team and designed a localized UI and managed seamless front-end/back-end integration with Supabase for real-time data delivery.",
       color: "hover:border-[#43D9AD]/50",
       github: "https://github.com/pjtoral/iDiscountMobileApp",
       image: "/idiscount.webp",
+      tags: ["Flutter", "Dart", "Supabase"],
+    },
+    {
+      id: 2,
+      title: "Project Gaia",
+      lang: "Flutter Dart",
+      icon: "🍀",
+      desc: "Co-developed a functional, AI-powered mobile application under strict time constraints, demonstrating rapid agile prototyping and engineered the mobile interface and backend infrastructure, seamlessly integrating physical Arduino sensor data with the Gemini API to execute real-time logic.",
+      color: "hover:border-[#43D9AD]/50",
+      github: "https://github.com/HoogaBoga/project_gaia",
+      image: "/gaia.webp",
+      tags: ["Flutter", "Dart", "Firebase", "Arduino"],
+    },
+
+    {
+      id: 3,
+      title: "Linya Website",
+      lang: "PHP Laravel (Other)",
+      icon: "✏️",
+      desc: "Engineered a full-stack student publication platform utilizing Laravel and PostgreSQL. Architected a robust relational database to efficiently manage digital content, authors, and media, providing a scalable content management system to modernize university journalism workflows.",
+      color: "hover:border-[#43D9AD]/50",
+      github: "https://github.com/SE-Ogs/linya",
+      image: "",
+      tags: ["PHP", "Laravel", "Blade", "PostgreSQL"],
+    },
+
+    {
+      id: 4,
+      title: "The Sugbo Intern",
+      lang: "Java, Flutter",
+      icon: "🧑‍🎓",
+      desc: "Developed a specialized, LinkedIn-style networking application dedicated to connecting university students with local internship opportunities. Built a responsive cross-platform mobile interface using Flutter, integrated with a secure, high-performance Java Spring Boot and PostgreSQL backend.",
+      color: "hover:border-[#43D9AD]/50",
+      github: "https://github.com/DrineDev/Sugbo-Intern",
+      image: "/sugbo.webp",
+      tags: ["Flutter", "Java", "Spring Boot", "PostgreSQL"],
     },
   ]
+
+  const displayedProjects =
+    filters.length > 0
+      ? projects.filter((p) => filters.some((f) => p.lang.includes(f)))
+      : projects
 
   return (
     <div className="flex flex-col gap-8 animate-in fade-in duration-500">
@@ -21,11 +62,11 @@ export default function ProjectsGrid() {
         <span className="text-[#43D9AD]">projects</span> = [
       </h2>
 
-      <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 justify-start">
-        {projects.map((p) => (
+      <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 items-start">
+        {displayedProjects.map((p) => (
           <div
             key={p.id}
-            className={`bg-[#011221] border border-white/10 rounded-xl overflow-hidden shadow-lg group transition-colors duration-300 ${p.color} w-full max-w-150 flex flex-col`}
+            className={`bg-[#011221] border border-white/10 rounded-xl overflow-hidden shadow-lg group transition-colors duration-300 ${p.color} w-full max-w-150 flex flex-col `}
           >
             <div className="p-4 border-b border-white/10 flex justify-between items-center text-xs font-mono bg-white/5">
               <span className="text-blue-400 truncate pr-4">
@@ -37,19 +78,52 @@ export default function ProjectsGrid() {
               </span>
             </div>
 
-            <div className="h-56 relative border-b border-white/5 overflow-hidden bg-[#0d1326] group-hover:opacity-80 transition-opacity">
-              <Image
-                src={p.image}
-                alt={`${p.title} screenshot`}
-                fill
-                className="object-cover"
-              />
+            <div className="h-64 relative border-b border-white/5 overflow-hidden bg-[#0d1326] group-hover:opacity-80 transition-opacity flex items-center justify-center">
+              {p.image !== "" ? (
+                <Image
+                  src={p.image}
+                  alt={`${p.title} screenshot`}
+                  fill
+                  /* 2. FULL IMAGE: object-contain ensures zero cropping. Added p-2 for slight breathing room. */
+                  className="object-cover"
+                />
+              ) : (
+                <span className="text-gray-600 font-mono text-sm opacity-50">
+                  // image_not_found.png
+                </span>
+              )}
             </div>
 
-            <div className="p-6 space-y-4">
-              <p className="text-gray-400 text-sm leading-relaxed min-h-20">
+            <div className="p-6 flex flex-col h-full gap-4">
+              {/* 3. FIXED SPACING: Removed the 'grow' class here! */}
+              <p className="text-gray-400 text-sm leading-relaxed text-justify">
                 {p.desc}
               </p>
+
+              {/* Tags will now sit perfectly below the text */}
+              <div className="flex flex-wrap gap-2 items-start content-start">
+                {p.tags.map((tag, i) => (
+                  <span
+                    key={i}
+                    className="px-2 py-1 bg-[#1C2B3A]/50 border border-white/5 rounded-md text-[10px] font-mono text-[#8694A6] group-hover:text-white group-hover:border-white/20 transition-all"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+
+              <div className="mt-auto w-full pt-6 flex flex-col gap-1.5 font-mono text-[10px] text-gray-500 mb-4">
+                <div className="flex justify-between border-b border-white/5 pb-1">
+                  <span>{">"} build_status:</span>
+                  <span className="text-[#43D9AD]">passing</span>
+                </div>
+                <div className="flex justify-between border-b border-white/5 pb-1">
+                  <span>{">"} deployment:</span>
+                  <span className="text-gray-400">successful</span>
+                </div>
+              </div>
+
+              {/* Notice I removed mt-auto from the button since the div above handles it now! */}
               <button
                 onClick={() => window.open(p.github, "_blank")}
                 className="bg-[#1C2B3A] text-white/80 hover:text-white hover:bg-white/10 px-4 py-2 rounded text-xs font-mono transition-colors w-full border border-white/5 cursor-pointer"

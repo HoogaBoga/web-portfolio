@@ -55,22 +55,19 @@ export default function HeroSection() {
         <h2 className="text-[#43D9AD] text-2xl md:text-3xl font-mono mb-8">
           {">"} Robotics & AI Developer
         </h2>
-        <div className="space-y-3 text-gray-400 font-mono text-sm leading-relaxed border-l-2 border-border-color pl-4">
-          <p>{`// Lead AI/ML building RAG pipelines`}</p>
-          <p>{`// Architecting clean C# .NET backends`}</p>
-        </div>
 
-        <p className="mt-5 text-sm text-white font-mono">
-          <span className="text-[#43D9AD]">const</span>{" "}
-          <span className="text-[#615FFF]">githubLink</span> ={" "}
-          <a
-            href="https://github.com/HoogaBoga"
-            className="text-[#FFA1AD] underline"
-            target="_blank"
-          >
-            https://github.com/HoogaBoga
-          </a>
-        </p>
+        <a
+          href="/Spyke_Resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 bg-[#1C2B3A] text-white/90 hover:text-white hover:bg-[#4D5BCE] px-6 py-3 rounded text-sm font-mono transition-colors border border-white/10 shadow-lg"
+        >
+          <span>📄</span> download_cv.pdf
+        </a>
+        <div className="space-y-2 mt-5 text-gray-400 font-mono text-[13px] md:text-sm">
+          <p>{`// love to create and innovate`}</p>
+          <p>{`// you can see more in my github page`}</p>
+        </div>
       </div>
 
       {/* Right Side */}

@@ -38,6 +38,21 @@ export default function TitleBar({ activeTab, setActiveTab }: TitleBarProps) {
           index.tsx
         </button>
 
+        {/* About Tab */}
+        <button
+          onClick={() => setActiveTab("about.json")}
+          className={`px-5 py-2.5 flex items-center gap-2 border-t-2 transition-all ${
+            activeTab === "about.json"
+              ? "bg-[#0d1326]/30 text-white border-[#F4BF4F] opacity-100"
+              : "bg-transparent text-gray-500 border-transparent hover:bg-white/5 opacity-70"
+          }`}
+        >
+          <span
+            className={`${activeTab === "about.json" ? "text-[#F4BF4F]" : "text-gray-500"}`}
+          >{`{}`}</span>{" "}
+          about.json
+        </button>
+
         {/* Projects Tab */}
         <button
           onClick={() => setActiveTab("projects.tsx")}
