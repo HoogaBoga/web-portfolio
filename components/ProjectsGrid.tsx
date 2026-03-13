@@ -55,7 +55,7 @@ export default function ProjectsGrid({ filters }: { filters: string[] }) {
       title: "Don Macchiatos",
       lang: "React.js & Prisma (Other)",
       icon: "☕",
-      desc: "Spearheaded the end-to-end development of a production-ready corporate website for a rapidly scaling regional coffee franchise. Built dynamic, highly responsive UI components and integrated Prisma ORM to architect a scalable, type-safe database schema for robust business data management.",
+      desc: "Led the end-to-end development of a production-ready corporate website for a rapidly scaling regional coffee franchise. Built dynamic, highly responsive UI components and integrated Prisma ORM to architect a scalable, type-safe database schema for robust business data management.",
       color: "hover:border-[#E27D60]/50",
       github: "https://github.com/HoogaBoga/donmac-web",
       image: "/web-portfolio/donmac.webp",
