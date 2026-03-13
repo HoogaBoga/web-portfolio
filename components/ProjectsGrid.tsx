@@ -9,7 +9,8 @@ export default function ProjectsGrid({ filters }: { filters: string[] }) {
       icon: "💰",
       desc: "Engineered and successfully published a cross-platform mobile application for student discounts to the Google Play Store within a specialized 4-person team and designed a localized UI and managed seamless front-end/back-end integration with Supabase for real-time data delivery.",
       color: "hover:border-[#43D9AD]/50",
-      github: "https://github.com/pjtoral/iDiscountMobileApp",
+      github:
+        "https://play.google.com/store/apps/details?id=com.idiscount.mobile&pcampaignid=web_share",
       image: "/web-portfolio/idiscount.webp",
       tags: ["Flutter", "Dart", "Supabase"],
     },
@@ -52,13 +53,25 @@ export default function ProjectsGrid({ filters }: { filters: string[] }) {
     {
       id: 5,
       title: "Don Macchiatos",
-      lang: "React.js & Prisma",
+      lang: "React.js & Prisma (Other)",
       icon: "☕",
       desc: "Spearheaded the end-to-end development of a production-ready corporate website for a rapidly scaling regional coffee franchise. Built dynamic, highly responsive UI components and integrated Prisma ORM to architect a scalable, type-safe database schema for robust business data management.",
       color: "hover:border-[#E27D60]/50",
       github: "https://github.com/HoogaBoga/donmac-web",
       image: "/web-portfolio/donmac.webp",
       tags: ["React.js", "Prisma", "Tailwind", "Full-Stack"],
+    },
+
+    {
+      id: 6, // Update this ID to the next available number!
+      title: "Peek-a-Boo", // Swap in your real game title
+      lang: "Godot & GDScript (Other)",
+      icon: "👻",
+      desc: "Engineered an immersive 3D horror game utilizing the Godot Engine. Scripted core gameplay loops, player movement, and dynamic enemy AI with GDScript, while optimizing real-time lighting and spatial audio to create a tense, high-performance user experience.",
+      color: "hover:border-[#8b5cf6]/50",
+      github: "https://github.com/toot-a-loot/UP-GameJam",
+      image: "/web-portfolio/gamejam.webp", // Remember to add your screenshot!
+      tags: ["Godot", "GDScript", "Game Dev", "3D"],
     },
   ]
 
