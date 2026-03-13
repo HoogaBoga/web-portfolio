@@ -10,7 +10,7 @@ export default function ProjectsGrid({ filters }: { filters: string[] }) {
       desc: "Engineered and successfully published a cross-platform mobile application for student discounts to the Google Play Store within a specialized 4-person team and designed a localized UI and managed seamless front-end/back-end integration with Supabase for real-time data delivery.",
       color: "hover:border-[#43D9AD]/50",
       github: "https://github.com/pjtoral/iDiscountMobileApp",
-      image: "/idiscount.webp",
+      image: "/web-portfolio/idiscount.webp",
       tags: ["Flutter", "Dart", "Supabase"],
     },
     {
@@ -21,7 +21,7 @@ export default function ProjectsGrid({ filters }: { filters: string[] }) {
       desc: "Co-developed a functional, AI-powered mobile application under strict time constraints, demonstrating rapid agile prototyping and engineered the mobile interface and backend infrastructure, seamlessly integrating physical Arduino sensor data with the Gemini API to execute real-time logic.",
       color: "hover:border-[#43D9AD]/50",
       github: "https://github.com/HoogaBoga/project_gaia",
-      image: "/gaia.webp",
+      image: "/web-portfolio/gaia.webp",
       tags: ["Flutter", "Dart", "Firebase", "Arduino"],
     },
 
@@ -33,7 +33,7 @@ export default function ProjectsGrid({ filters }: { filters: string[] }) {
       desc: "Engineered a full-stack student publication platform utilizing Laravel and PostgreSQL. Architected a robust relational database to efficiently manage digital content, authors, and media, providing a scalable content management system to modernize university journalism workflows.",
       color: "hover:border-[#43D9AD]/50",
       github: "https://github.com/SE-Ogs/linya",
-      image: "/linya.webp",
+      image: "/web-portfolio/linya.webp",
       tags: ["PHP", "Laravel", "Blade", "PostgreSQL"],
     },
 
@@ -45,7 +45,7 @@ export default function ProjectsGrid({ filters }: { filters: string[] }) {
       desc: "Developed a specialized, LinkedIn-style networking application dedicated to connecting university students with local internship opportunities. Built a responsive cross-platform mobile interface using Flutter, integrated with a secure, high-performance Java Spring Boot and PostgreSQL backend.",
       color: "hover:border-[#43D9AD]/50",
       github: "https://github.com/DrineDev/Sugbo-Intern",
-      image: "/sugbo.webp",
+      image: "/web-portfolio/sugbo.webp",
       tags: ["Flutter", "Java", "Spring Boot", "PostgreSQL"],
     },
   ]

@@ -79,16 +79,12 @@ export default function AboutSection() {
           <span className="text-white">: </span>
           <span className="text-gray-400">[</span>
           <br />
-          <span className="text-[#FEA55F]"> "Volleyball"</span>
-          <span className="text-white">,</span>
-          <br />
           <span className="text-[#FEA55F]"> "Basketball"</span>
           <span className="text-white">,</span>
           <br />
-          <span className="text-[#FEA55F]">
-            {" "}
-            "Hitting the gym (Incline press & triceps)"
-          </span>
+          <span className="text-[#FEA55F]"> "Going to Gym"</span>
+          <br />
+          <span className="text-[#FEA55F]"> "Solving Sudoku puzzles"</span>
           <br />
           <span className="text-gray-400"> ]</span>
           <br />
