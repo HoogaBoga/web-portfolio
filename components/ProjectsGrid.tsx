@@ -67,7 +67,7 @@ export default function ProjectsGrid({ filters }: { filters: string[] }) {
       title: "Peek-a-Boo", // Swap in your real game title
       lang: "Godot & GDScript (Other)",
       icon: "👻",
-      desc: "Engineered an immersive 3D horror game utilizing the Godot Engine. Scripted core gameplay loops, player movement, and dynamic enemy AI with GDScript, while optimizing real-time lighting and spatial audio to create a tense, high-performance user experience.",
+      desc: "Helped in engineering an immersive 3D horror game utilizing the Godot Engine. Scripted core gameplay loops, player movement, and dynamic enemy AI with GDScript, while optimizing real-time lighting and spatial audio to create a tense, high-performance user experience.",
       color: "hover:border-[#8b5cf6]/50",
       github: "https://github.com/toot-a-loot/UP-GameJam",
       image: "/web-portfolio/gamejam.webp", // Remember to add your screenshot!
