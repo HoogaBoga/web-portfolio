@@ -4,6 +4,7 @@ import AboutSection from "@/components/AboutSection"
 import HeroSection from "@/components/HeroSection"
 import ProjectsGrid from "@/components/ProjectsGrid"
 import Sidebar from "@/components/Sidebar"
+import StarBackground from "@/components/StarBackground"
 import TitleBar from "@/components/TitleBar"
 import { useState } from "react"
 
@@ -12,8 +13,9 @@ export default function Home() {
   const [filters, setFilters] = useState<string[]>([])
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background p-4 md:p-10 font-sans ">
+    <div className="flex min-h-screen items-center justify-center  p-4 md:p-10 font-sans ">
       <main className="flex h-[80vh] w-full max-w-6xl flex-col rounded-xl border-2 border-border-color bg-inner-background shadow-2xl overflow-hidden">
+        <StarBackground />
         {/* Title Bar */}
         <TitleBar activeTab={activeTab} setActiveTab={setActiveTab} />
 

@@ -33,7 +33,7 @@ export default function ProjectsGrid({ filters }: { filters: string[] }) {
       desc: "Engineered a full-stack student publication platform utilizing Laravel and PostgreSQL. Architected a robust relational database to efficiently manage digital content, authors, and media, providing a scalable content management system to modernize university journalism workflows.",
       color: "hover:border-[#43D9AD]/50",
       github: "https://github.com/SE-Ogs/linya",
-      image: "",
+      image: "/linya.webp",
       tags: ["PHP", "Laravel", "Blade", "PostgreSQL"],
     },
 

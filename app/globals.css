@@ -51,3 +51,64 @@ body {
 .editor-scroll::-webkit-scrollbar-thumb:hover {
   background-color: #4d5bce;
 }
+
+/* PARALLAX STAR BACKGROUND */
+.stars-small {
+  width: 1px;
+  height: 1px;
+  background: transparent;
+  box-shadow: var(--star-shadow);
+  animation: animStar 50s linear infinite;
+}
+.stars-small::after {
+  content: " ";
+  position: absolute;
+  top: 2000px;
+  width: 1px;
+  height: 1px;
+  background: transparent;
+  box-shadow: var(--star-shadow);
+}
+
+.stars-medium {
+  width: 2px;
+  height: 2px;
+  background: transparent;
+  box-shadow: var(--star-shadow);
+  animation: animStar 100s linear infinite;
+}
+.stars-medium::after {
+  content: " ";
+  position: absolute;
+  top: 2000px;
+  width: 2px;
+  height: 2px;
+  background: transparent;
+  box-shadow: var(--star-shadow);
+}
+
+.stars-large {
+  width: 3px;
+  height: 3px;
+  background: transparent;
+  box-shadow: var(--star-shadow);
+  animation: animStar 150s linear infinite;
+}
+.stars-large::after {
+  content: " ";
+  position: absolute;
+  top: 2000px;
+  width: 3px;
+  height: 3px;
+  background: transparent;
+  box-shadow: var(--star-shadow);
+}
+
+@keyframes animStar {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-2000px);
+  }
+}
