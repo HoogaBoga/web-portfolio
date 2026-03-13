@@ -73,6 +73,18 @@ export default function ProjectsGrid({ filters }: { filters: string[] }) {
       image: "/web-portfolio/gamejam.webp", // Remember to add your screenshot!
       tags: ["Godot", "GDScript", "Game Dev", "3D"],
     },
+
+    {
+      id: 7,
+      title: "TeachAssist (AI4Devs)",
+      lang: "Flutter & n8n (AI) (Other)",
+      icon: "🏆",
+      desc: "Winner of 'Best in Technical Execution' at the AI4Devs Hackathon. Co-developed a cross-platform mobile application to automate and streamline the grading process for educators. Architected a complex backend workflow bridging a Flutter UI with n8n and generative AI to evaluate student assessments in real-time.",
+      color: "hover:border-[#FBBF24]/50", // A nice gold border for the win!
+      github: "https://github.com/HoogaBoga/ai4devs",
+      image: "/web-portfolio/ai4devs.webp",
+      tags: ["Flutter", "n8n", "AI Workflow", "Hackathon Winner"],
+    },
   ]
 
   const displayedProjects =
