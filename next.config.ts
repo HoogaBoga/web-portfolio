@@ -5,6 +5,8 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true, // Prevents image crashes on GitHub Pages
   },
+
+  basePath: "/web-portfolio",
 }
 
 export default nextConfig
