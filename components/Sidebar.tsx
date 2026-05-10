@@ -45,7 +45,7 @@ export default function Sidebar({
         </a>
 
         <a
-          href="www.linkedin.com/in/spyke-matthew-lim-61a16b350"
+          href="https://www.linkedin.com/in/spyke-matthew-lim-61a16b350"
           target="_blank"
           rel="nonreferrer"
           className="hover:text-white block cursor-pointer transition-colors"
